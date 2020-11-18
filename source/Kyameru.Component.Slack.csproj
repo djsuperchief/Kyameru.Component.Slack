@@ -10,11 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Kyameru.Core" Version="0.0.2" />
     <PackageReference Include="System.Text.Json" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\core\Kyameru.Core\Kyameru.Core.csproj" />
   </ItemGroup>
 
 </Project>

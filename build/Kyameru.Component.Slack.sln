@@ -3,9 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13DE355E-EAB9-491A-9614-BF3F99FDDAE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{95328D55-A43D-4CD8-B0E4-6672F4FD60D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kyameru.Component.Slack", "..\source\Kyameru.Component.Slack.csproj", "{CDACBF9B-B4F5-467F-A537-6EC1736863E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kyameru.Component.Slack.Tests", "..\tests\UnitTests\Kyameru.Component.Slack.Tests\Kyameru.Component.Slack.Tests.csproj", "{1EDF2B9F-B458-45EA-A1F9-0100DBF0998D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDACBF9B-B4F5-467F-A537-6EC1736863E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDACBF9B-B4F5-467F-A537-6EC1736863E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDACBF9B-B4F5-467F-A537-6EC1736863E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDACBF9B-B4F5-467F-A537-6EC1736863E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDF2B9F-B458-45EA-A1F9-0100DBF0998D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDF2B9F-B458-45EA-A1F9-0100DBF0998D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDF2B9F-B458-45EA-A1F9-0100DBF0998D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDF2B9F-B458-45EA-A1F9-0100DBF0998D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDACBF9B-B4F5-467F-A537-6EC1736863E5} = {13DE355E-EAB9-491A-9614-BF3F99FDDAE2}
+		{1EDF2B9F-B458-45EA-A1F9-0100DBF0998D} = {95328D55-A43D-4CD8-B0E4-6672F4FD60D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BFC4C1-8096-4EDD-9922-FAD5C847C32E}
