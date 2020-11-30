@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kyameru.Core" Version="0.0.2" />
+    <PackageReference Include="Kyameru.Core" Version="0.0.6-beta" />
     <PackageReference Include="System.Text.Json" Version="5.0.0" />
   </ItemGroup>
 
