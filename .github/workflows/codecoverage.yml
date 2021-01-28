@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: dotnet build build/Kyameru.Component.Slack.sln --configuration Release --no-restore
       - name: Test
-        run: dotnet test tests/Kyameru.Component.Slack.Tests/Kyameru.Component.Slack.Tests.csproj --no-restore --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=TestCoverage/
+        run: dotnet test tests/UnitTests/Kyameru.Component.Slack.Tests/Kyameru.Component.Slack.Tests.csproj --no-restore --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=TestCoverage/
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:

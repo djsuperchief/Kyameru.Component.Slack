@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: dotnet build build/Kyameru.Component.Slack.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test tests/Kyameru.Component.Slack.Tests/Kyameru.Component.Slack.Tests.csproj --no-restore --verbosity normal
+      run: dotnet test tests/UnitTests/Kyameru.Component.Slack.Tests/Kyameru.Component.Slack.Tests.csproj --no-restore --verbosity normal
     - name: Pack
       run: dotnet pack source/Kyameru.Component.Slack.csproj -c Release -p:PackageVersion=$VERSION
     - name: Push
