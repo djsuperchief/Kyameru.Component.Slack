@@ -4,4 +4,4 @@ updates:
     open-pull-requests-limit: 5
     package-ecosystem: "nuget"
     schedule:
-      timezone: 05:00 UTC
+      interval: "daily"
