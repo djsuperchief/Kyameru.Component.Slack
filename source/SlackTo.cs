@@ -16,7 +16,7 @@ namespace Kyameru.Component.Slack
         /// <summary>
         /// Allowed headers.
         /// </summary>
-        private readonly string[] allowedHeaders = new string[] { "Target", "MessageSource" };
+        private readonly string[] allowedHeaders = new string[] { "Target", "MessageSource", "Username", "Channel" };
 
         /// <summary>
         /// Slack webhook URI

@@ -1,10 +1,13 @@
-name: Build
+name: Publish Release Package
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  release:
+    types:
+      - published
+
+# this needs to be better but also controlled.
+env:
+  VERSION: ${{ github.event.release.tag_name }}
 
 jobs:
   build:
@@ -23,3 +26,8 @@ jobs:
       run: dotnet build build/Kyameru.Component.Slack.sln --configuration Release --no-restore
     - name: Test
       run: dotnet test tests/Kyameru.Component.Slack.Tests/Kyameru.Component.Slack.Tests.csproj --no-restore --verbosity normal
+    - name: Pack
+      run: dotnet pack source/Kyameru.Component.Slack.csproj -c Release -p:PackageVersion=$VERSION
+    - name: Push
+      run: dotnet nuget push source/bin/Release/Kyameru.Component.Slack.$VERSION.nupkg --api-key ${{ secrets.KYAMERU_NUGET }} -s https://api.nuget.org/v3/index.json
+
