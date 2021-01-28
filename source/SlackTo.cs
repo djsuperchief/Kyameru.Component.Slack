@@ -76,7 +76,9 @@ namespace Kyameru.Component.Slack
         {
             Payload slackPayload = new Payload()
             {
-                text = this.GetMessageSource(item)
+                text = this.GetMessageSource(item),
+                channel = this.GetHeader("Channel"),
+                username = this.GetHeader("Username")
             };
 
             if (item.Error == null)
@@ -145,6 +147,19 @@ namespace Kyameru.Component.Slack
             else
             {
                 routable.SetInError(this.RaiseError("GettingMessageSource", "Error getting message source."));
+            }
+
+
+
+            return response;
+        }
+
+        private string GetHeader(string header)
+        {
+            string response = string.Empty;
+            if(this.headers.ContainsKey(header))
+            {
+                response = this.headers[header];
             }
 
             return response;
