@@ -39,7 +39,7 @@ namespace Kyameru.Component.Slack.Tests
                 { "MessageSource", "Body" }
             };
             Slack.Inflator inflator = new Inflator();
-            Assert.NotNull(inflator.CreateAtomicComponent(headers));
+            Assert.Throws<NotImplementedException>(() => { inflator.CreateAtomicComponent(headers); });
         }
 
     }
