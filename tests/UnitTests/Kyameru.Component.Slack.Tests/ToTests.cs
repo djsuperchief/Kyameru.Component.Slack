@@ -46,6 +46,21 @@ namespace Kyameru.Component.Slack.Tests
         }
 
         [Test]
+        public void LoggingIsTriggered()
+        {
+            bool callbackMade = false;
+            SlackTo slackTo = this.GetComponent("Body", this.SetupOkHandler());
+            Routable routable = new Routable(new Dictionary<string, string>(), "This is a slack message");
+            slackTo.OnLog += delegate(object sender, Log log) {
+                callbackMade = true;
+	        };
+            slackTo.Process(routable);
+            Assert.IsTrue(callbackMade);
+
+        }
+
+
+        [Test]
         public void BlankHeaderErrors()
         {
             SlackTo slackTo = this.GetComponent("Header", this.SetupOkHandler());
@@ -90,7 +105,9 @@ namespace Kyameru.Component.Slack.Tests
             return new Dictionary<string, string>()
             {
                 { "Target", "test" },
-                { "MessageSource", source }
+                { "MessageSource", source },
+                { "Username", "Kyameru" },
+                { "Channel", "General" }
             };
         }
     }
