@@ -27,7 +27,20 @@ namespace Kyameru.Component.Slack.Tests
                 { "Target", "test" }
             };
             Slack.Inflator inflator = new Inflator();
-            Assert.Throws<NotImplementedException>(() => { inflator.CreateFromComponent(headers); });
+            Assert.Throws<NotImplementedException>(() => { inflator.CreateFromComponent(headers, false); });
         }
+
+        [Test]
+        public void ActivateAtomicThrows()
+        {
+            Dictionary<string, string> headers = new Dictionary<string, string>()
+            {
+                { "Target", "test" },
+                { "MessageSource", "Body" }
+            };
+            Slack.Inflator inflator = new Inflator();
+            Assert.Throws<NotImplementedException>(() => { inflator.CreateAtomicComponent(headers); });
+        }
+
     }
 }
