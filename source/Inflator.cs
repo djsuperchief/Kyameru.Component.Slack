@@ -22,13 +22,9 @@ namespace Kyameru.Component.Slack
         /// <summary>
         /// Creates a from component.
         /// </summary>
-        /// <param name="headers">Incoming headers.</param>
+        /// <param name="headers">Incoming headers.</param>]
+        /// <param name="isAtomic">value indicating whether the component is considered to be atomic.</param>
         /// <returns>Returns a new instance of a <see cref="IFromComponent"/> class.</returns>
-        public IFromComponent CreateFromComponent(Dictionary<string, string> headers)
-        {
-            throw new NotImplementedException();
-        }
-
         public IFromComponent CreateFromComponent(Dictionary<string, string> headers, bool isAtomic)
         {
             throw new NotImplementedException();

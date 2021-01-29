@@ -1,6 +1,6 @@
 # Kyameru.Component.Slack
 
-![Build](https://github.com/djsuperchief/Kyameru.Component.Slack/workflows/Build/badge.svg)
+![Build](https://github.com/djsuperchief/Kyameru.Component.Slack/workflows/Build%20And%20Test/badge.svg)
 ![CodeQL](https://github.com/djsuperchief/Kyameru.Component.Slack/workflows/CodeQL/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/djsuperchief/Kyameru.Component.Slack/badge.svg?branch=main)](https://coveralls.io/github/djsuperchief/Kyameru.Component.Slack?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
